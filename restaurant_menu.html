@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VA-11 Hall-A Bar and Restaurant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            margin: 0;
+            padding: 40px;
+        }
+        header {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #f0f0f0;
+            text-decoration: none;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 3em;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        article {
+            margin-bottom: 20px;
+        }
+        article img {
+            width: 100%;
+            max-width: 300px;
+            height: 100%;
+            max-height: 200px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        article h3 {
+            margin: 10px 0;
+            text-align: center;
+        }
+        article p {
+            text-align: center;
+            font-size: 1.2em;
+        }
+        form {
+            background-color: #444;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        form * {
+            margin: 10px 0;
+        }
+        form label {
+            display: block;
+            margin: 10px 0;
+        }
+        form input[type="number"],
+        form textarea {
+            width: 98%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid #666;
+            background-color: #555;
+            color: #f0f0f0;
+        }
+        form input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        form input[type="submit"] {
+            background-color: #181818;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        </style>
+</head>
+<body>
+    <header>
+        <img src="logo.webp" alt="logo" id="header-img">
+        <h1>VA-11 Hall-A Bar and Restaurant</h1>
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#order-form">Order Form</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="menu">
+            <h2>Menu</h2>
+            <article>
+            <img src="cyber_burger.jpeg" alt="Cyber Burger">
+            <h3>Cyber Burger</h3>
+            <p>A synthetic protein patty with neon lettuce, holo-tomato, and quantum cheese. <i>Price: 15.77 credits</i></p>
+            </article>
+            <article>
+            <img src="neon_pizza.jpg" alt="Neon Pizza">
+            <h3>Neon Pizza</h3>
+            <p>A glowing crust topped with bio-engineered mozzarella, basil nanobots, and luminescent sauce. <i>Price: 20.77 credits</i></p>
+            </article>
+            <article>
+            <img src="nuclear_pasta.webp" alt="Nuclear Pasta">
+            <h3>Nuclear Pasta</h3>
+            <p>Virtual pasta strands with creamy plasmatic sauce, synth-bacon, and pixelated parmesan. <i>Price: 18.77 credits</i></p>
+            </article>
+        </section>
+        <section id="place-form">
+            <h2>Place Your Order</h2>
+            <form>
+                <label for="cyber_burger_qty">Cyber Burger Quantity:</label>
+                <input type="number" id="cyber_burger_qty" name="cyber_burger_qty" min="0" required>
+                
+                <label for="neon_pizza_qty">Neon Pizza Quantity:</label>
+                <input type="number" id="neon_pizza_qty" name="neon_pizza_qty" min="0" required>
+                
+                <label for="nuclear_pasta_qty">Nuclear Pasta Quantity:</label>
+                <input type="number" id="nuclear_pasta_qty" name="nuclear_pasta_qty" min="0" required>
+                
+                <fieldset>
+                    <legend>Sides and Add-ons:</legend>
+                    <label>
+                    <input type="checkbox" name="sides[]" value="fries"> Fries
+                    </label>
+                    <label>
+                    <input type="checkbox" name="sides[]" value="salad"> Salad
+                    </label>
+                    <label>
+                    <input type="checkbox" name="sides[]" value="drink"> Drink
+                    </label>
+                </fieldset>
+            
+                <label for="special_requests">Special Requests:</label>
+                <textarea id="special_requests" name="special_requests" rows="4" placeholder="Enter any special requests here..."></textarea>
+                
+                <input type="submit" value="Go To Checkout">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Made with love by DavidarCZ</p>
+    </footer>
+</body>
+</html>
